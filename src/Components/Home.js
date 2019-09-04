@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Home(props) {
+  console.log(props);
   return (
     <div className="home-wrapper">
       <img

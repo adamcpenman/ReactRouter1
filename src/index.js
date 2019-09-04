@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import ItemsList from "./Components/ItemList";
 import Home from "./Components/Home";
+import Item from "./Components/item";
 import data from "./data";
 
 import "./styles.css";
@@ -23,7 +24,8 @@ const App = () => {
       {/* <Home /> */}
       {/* exact={true} */}
       <Route exact path="/" component={Home} />
-      <Route path="/item-list" component={ItemsList} />
+      <Route path="/item-list" component={ItemsList} exact />
+      <Route path="/item-list/:id" component={Item} />
     </div>
   );
 };
