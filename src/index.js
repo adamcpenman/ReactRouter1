@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import Home from "./Components/Home";
 import data from "./data";
 
 import "./styles.css";
@@ -15,6 +16,8 @@ const App = () => {
         <h1 className="store-header">Dan's Trinkets</h1>
         <div className="nav-links" />
       </nav>
+      {/* <Home /> */}
+      <Route path="/" component={Home} />
     </div>
   );
 };
